@@ -1,8 +1,6 @@
-# CT107D
-蓝桥杯单片机
 
 #include "STC15F2K60S2.h"
-#include	"iic.h" 
+#include "iic.h" 
 #define uchar unsigned char
 #define uint unsigned int
 uchar code tab[]={0xc0,0xf9,0xa4,0xb0,0x99,0x92,0x82,0xf8,0x80,0x90,0xff};		//段码表
@@ -13,6 +11,7 @@ void keyscan();
 void Timer1Init(void)	;
 void allinit();
 void delayms(int xms);
+
 uchar temp=0xff,key=0xff;
 uint tt,shuiliang=0,price=0;
 uchar ad;
@@ -169,5 +168,3 @@ void delayms(int xms)  //延时函数
 	for(i=xms;i>0;i--)
 	for(j=845;j>0;j--);
 }
-
-
